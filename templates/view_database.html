@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Database</title>
+</head>
+<body>
+    <h1>User Database</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Enrollment Number</th>
+            <th>Name</th>
+            <th>Semester</th>
+            <th>Score</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.enrollment_number }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.semester }}</td>
+            <td>{{ user.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
